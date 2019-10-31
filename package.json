@@ -1,0 +1,21 @@
+{
+  "name": "emrapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build && node index.js",
+    "start": "node index.js",
+    "build": "node builder/builder.js",
+    "deploy": "OVERRIDE_DATA=true npm run build && gcloud functions deploy emrapi --runtime nodejs10 --region europe-west1 --trigger-http --entry-point app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "leven": "^3.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

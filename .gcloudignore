@@ -1,0 +1,9 @@
+.gcloudignore
+.git
+.gitignore
+.prettierrc.yaml
+builder
+data
+src
+README.md
+node_modules
